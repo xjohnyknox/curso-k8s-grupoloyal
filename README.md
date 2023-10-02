@@ -24,6 +24,8 @@ En este curso de 8 días, exploraremos los fundamentos de Kubernetes y cómo usa
 
 ### Día 1: Introducción a Kubernetes y Minikube
 - Presentación del curso
+- Del monolito al microservicio
+- Repaso sobre contenedores
 - Qué es Kubernetes y por qué es importante
 - Instalación y configuración de Minikube
 - Creación del primer clúster con Minikube
@@ -31,7 +33,7 @@ En este curso de 8 días, exploraremos los fundamentos de Kubernetes y cómo usa
 ### Día 2: Pods y Contenedores
 - Concepto de Pods
 - Creación y gestión de contenedores
-- Despliegue de aplicaciones en Pods
+- Despliegue de aplicaciones en Pods (Deployment, Replicasets, Daemonsets)
 
 ### Día 3: Servicios y Balanceo de Carga
 - Servicios en Kubernetes
@@ -77,9 +79,5 @@ En este curso de 8 días, exploraremos los fundamentos de Kubernetes y cómo usa
 ## Contribuciones
 
 Si deseas contribuir a este curso o informar sobre errores, no dudes en abrir un Issue o enviar un Pull Request. ¡Estamos abiertos a tus sugerencias!
-
-## Licencia
-
-Este curso está disponible bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ¡Esperamos que disfrutes de tu viaje a través de Kubernetes - Grupo Loyal!
