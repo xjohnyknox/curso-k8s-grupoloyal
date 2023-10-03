@@ -20,4 +20,4 @@ Como crear tu propio cluster:
 
 Recursos del curso:
 - [ ] [Enlace con formulario final de retroalimentación](https://forms.office.com/Pages/ResponsePage.aspx?id=2sqCWS7YOU-qghbzEefnlnBB0KLoFw9AoxW615hjNXVUOVJVU0VJUk1QSVIzU0ZRWjM5RkdKVktJMS4u).
-- [ ] [Enlace con recursos en OneDrive](https://loyalinfinitybarcelona-my.sharepoint.com/personal/formadortres_grupoloyal_es/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fformadortres%5Fgrupoloyal%5Fes%2FDocuments%2FIndra%20%2D%20Kubernetes%20%2D%20del%202%20al%2011092023)
+- [ ] [Enlace con recursos en OneDrive](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EtSrKqrMWBdMhqmYgp6uqmsB1dBwJfwCf5Sv5cA1XOELBA?e=Wkb9gl)
