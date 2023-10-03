@@ -67,7 +67,6 @@ En este curso de 8 días, exploraremos los fundamentos de Kubernetes y cómo usa
 
 ## Archivos en este Repositorio
 
-- `dias/`: Contiene las notas y recursos de cada día del curso.
 - `ejercicios/`: Contiene ejercicios prácticos y proyectos relacionados con el curso.
 - `recursos/`: Archivos adicionales y recursos útiles para el curso.
 
