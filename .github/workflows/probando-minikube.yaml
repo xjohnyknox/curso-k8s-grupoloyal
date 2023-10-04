@@ -1,4 +1,4 @@
-name: Integración Continua con minikube
+name: Integración Continua con Minikube
 on: 
   push:
     branches:
@@ -6,13 +6,12 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    name: build example and deploy to minikube
+    name: Ejemplo De Construir y Desplegar Un Cluster Minikube
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 #Usando la ultima version del action v4.1.0
     - name: Start minikube
       uses: medyagh/setup-minikube@master
-    - name: Try the cluster !
+    - name: Mirando Pods En Todo El Cluster
       run: kubectl get pods -A  
-    - name: Mostrando los nodos
-      run:
-        kubectl get nodes
+    - name: Mostrando Los Nodos
+      run: kubectl get nodes -o wide
