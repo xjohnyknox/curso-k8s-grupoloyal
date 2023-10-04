@@ -9,6 +9,8 @@ En este primer dia, tenemos los siguientes ejercicios:
   - [4-arreglame](#4-arreglame)
   - [5-desplegando-apache](#5-desplegando-apache)
   - [6-daemonset](#6-daemonset)
+  - [7-nodeport](#7-nodeport)
+  - [8-cluster-ip](#8-cluster-ip)
 
 ## 1-kubedoom
 
@@ -91,3 +93,11 @@ Y todo debe correr en el namespace **ejercicio5**
 
 Para este ejercicio, vamos a ver como seria un archivo de daemonset, lamentablemente porque estamos usando minikube, desplegar un DS de fluentd tomaria un poco mas de trabajo extra.
 Habia un addon de efk pero al parecer tiene una vulnerabilidad no parchada.
+
+## 7-nodeport
+
+Ejercicio para ver un servicio tipo NodePort
+
+## 8-cluster-ip
+
+Ejercicio para ver un servicio tipo ClusterIP
