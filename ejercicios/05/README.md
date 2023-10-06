@@ -183,4 +183,3 @@ Aplica el manifiesto `3.yaml`, y revisa cuantos pod crea.
 Ahora, muestra los logs del container `dotfile-test-container` y luego del `show-content`.
 
 Que notaste?
-
