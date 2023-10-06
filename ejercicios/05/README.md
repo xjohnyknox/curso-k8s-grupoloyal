@@ -207,6 +207,8 @@ DB_User=root
 DB_Password=password123
 ```
 
+> `kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal DB_User=root --from-literal DB_Password=password123`
+
 Borra el pod y vuelvelo a crear.
 
 Expone el puerto 8080 para mirar si la aplicación esta corriendo bien.
