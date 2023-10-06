@@ -9,4 +9,9 @@ spec:
       envFrom:
       - secretRef:
           name: db-secret
+    - name: mysql-db
+      image: mysql:latest
+      envFrom:
+      - secretRef:
+          name: db-secret          
   restartPolicy: Never

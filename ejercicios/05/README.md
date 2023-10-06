@@ -12,6 +12,7 @@ En este dia, tenemos los siguientes ejercicios:
     - [2](#2)
     - [3](#3)
   - [4](#4)
+  - [5](#5)
 
 
 ## 1-comandos
@@ -193,3 +194,19 @@ Aplica el manifiesto `3.yaml`, y revisa cuantos pod crea.
 Ahora, muestra los logs del container `dotfile-test-container` y luego del `show-content`.
 
 Que notaste?
+
+## 5
+Aplica el manifiesto `4.yaml` y revisa que le falta.
+
+Ahora crea un secreto con estos valores:
+
+```
+nombre: db-secret
+DB_Host=mibasededatos
+DB_User=root
+DB_Password=password123
+```
+
+Borra el pod y vuelvelo a crear.
+
+Expone el puerto 8080 para mirar si la aplicación esta corriendo bien.
