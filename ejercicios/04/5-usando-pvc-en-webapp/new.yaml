@@ -10,8 +10,20 @@ spec:
     name: simulador-eventos
     volumeMounts:
     - mountPath: /log
-      name: webapp
+      name: logs
   volumes:
-  - name: webapp
+  - name: logs
     persistentVolumeClaim:
-      claimName: claim-log-1    
+      claimName: claim-simulador-eventos 
+   
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: claim-simulador-eventos
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 64Mi
