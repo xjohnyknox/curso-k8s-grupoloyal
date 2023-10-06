@@ -6,7 +6,7 @@ spec:
   containers:
     - name: juego-configmaps-con-volumen
       image: busybox:latest
-      command: [ "/bin/sh", "-c", "ls /etc/config/" ]
+      command: [ "/bin/sh", "-c", "sleep 890980" ]
       volumeMounts:
       - name: config-volume
         mountPath: /etc/config
