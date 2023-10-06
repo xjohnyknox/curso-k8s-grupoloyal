@@ -10,3 +10,9 @@ spec:
     image: debian
     command: ["/bin/sh"]
     args: ["-c", "while true; do echo hello; sleep 10;done"]
+
+  - name: nuevo-contenedor
+    image: ubuntu:latest
+    command: ["/bin/sh"]
+    args: ["-c", "cat /etc/os-release"]
+  restartPolicy: Never

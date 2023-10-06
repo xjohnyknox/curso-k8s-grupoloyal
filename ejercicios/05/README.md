@@ -4,6 +4,7 @@ En este dia, tenemos los siguientes ejercicios:
 
 - [Ejercicios Dia 05.](#ejercicios-dia-05)
   - [1-comandos](#1-comandos)
+    - [4.yaml](#4yaml)
   - [2-configmaps](#2-configmaps)
   - [3-redis](#3-redis)
   - [4-secrets](#4-secrets)
@@ -18,6 +19,15 @@ En este dia, tenemos los siguientes ejercicios:
 Vamos a ver como funciona ejecutar comandos dentro de un pod, de diferentes maneras.
 
 Revisa y aplica cada manifiesto.
+
+### 4.yaml
+
+Crear manifiesto que corra un Pod, llamado ejercicio4
+En ese pod, tener 3 contenedores asi:
+ 1. ubuntu, con la imagen ubuntu:latest
+ 2. debian, con la imagen debian:latest
+ 3. oraclelinux, con la imagen oraclelinux:8
+ Y que en cada uno muestre su version del sistema
 
 ## 2-configmaps
 
