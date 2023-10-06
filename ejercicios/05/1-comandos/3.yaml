@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 3-command-demo
+  labels:
+    proposito: demostrar-comandos
+spec:
+  containers:
+  - name: 3-command-demo-container
+    image: debian
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello; sleep 10;done"]

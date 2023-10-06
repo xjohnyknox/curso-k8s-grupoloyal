@@ -9,6 +9,7 @@
   - [Como-tunear-tu-VSCode](#como-tunear-tu-vscode)
   - [Herramientas-de-YAML](#herramientas-de-yaml)
   - [Recursos-del-curso:](#recursos-del-curso)
+  - [Canales-Youtube](#canales-youtube)
 
 ## Información-sobre-DevOps:
 - [ ] [Tabla periódica de los elementos DevOps](https://digital.ai/learn/devsecops-periodic-table/)
@@ -37,3 +38,6 @@
 ## Recursos-del-curso:
 - [ ] [Enlace con formulario final de retroalimentación](https://forms.office.com/Pages/ResponsePage.aspx?id=2sqCWS7YOU-qghbzEefnlnBB0KLoFw9AoxW615hjNXVUOVJVU0VJUk1QSVIzU0ZRWjM5RkdKVktJMS4u).
 - [ ] [Enlace con recursos en OneDrive](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EtSrKqrMWBdMhqmYgp6uqmsB1dBwJfwCf5Sv5cA1XOELBA?e=Wkb9gl)
+
+## Canales-Youtube
+- [PVCybinding](algo)

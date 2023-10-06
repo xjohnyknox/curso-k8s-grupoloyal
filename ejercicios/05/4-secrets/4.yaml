@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-db
+spec:
+  containers:
+    - name: webapp-db
+      image: kodekloud/simple-webapp-mysql
+      envFrom:
+      - secretRef:
+          name: db-secret
+  restartPolicy: Never

@@ -38,31 +38,35 @@ En este curso de 8 días, exploraremos los fundamentos de Kubernetes y cómo usa
 ### Día 3: Servicios y Balanceo de Carga
 - Servicios en Kubernetes
 - Balanceo de carga en Kubernetes
-- Prácticas con servicios y balanceadores de carga
+- Prácticas con servicios
 
 ### Día 4: Almacenamiento y Persistencia
-- Almacenamiento en Kubernetes
+- Almacenamiento en Docker y en Kubernetes
 - Volúmenes y persistencia de datos
 - Configuración de almacenamiento persistente
 
-### Día 5: Escalabilidad y Autoscaling
-- Escalabilidad horizontal y vertical
-- Configuración de escalabilidad automática
-- Prácticas de escalabilidad
+### Día 5: Configurando pods avanzados, node affinity, taints y tolerations.
+- Comandos y argumentos en un pod
+- Variables de ambiente
+- ConfigMaps
+- Configuración con ConfigMaps y Secrets
+
 
 ### Día 6: Configuración y Gestión de Recursos
 - Configuración de recursos de CPU y memoria
 - Limitación y solicitud de recursos
-- Monitoreo de recursos
+- Monitoreo de recursos (Metrics Server)
+- Node Affinity
+- Taints, Tolerations
 
-### Día 7: Despliegues y Actualizaciones
-- Despliegues en Kubernetes
-- Actualización de aplicaciones
-- Rollbacks y revisiones
+### Día 7: Mantenimiento del cluster
+- Actualizando kubernetes
+- Haciendo backup a ETCD
 
-### Día 8: Gestión de Configuraciones y Herramientas Avanzadas
-- Configuración con ConfigMaps y Secrets
-- Uso de Helm para gestión de paquetes
+### Día 8: Seguridad, Diseño de Cluster
+- RBAC (ClusterRoles, SA, Certs)
+- Network Policy
+- Diseño del cluster
 - Despliegue continuo (CI/CD) con Kubernetes
 
 ## Archivos en este Repositorio

@@ -15,8 +15,8 @@ En este dia, tenemos los siguientes ejercicios:
 
 ## 1-event-simulator
 
-Crea un deployment llamado: `simulador-eventos`
-Con `1 replica` y que use la imagen: `kodekloud/event-simulator`
+Crea un pod llamado: `simulador-eventos`
+Que use la imagen: `kodekloud/event-simulator`
 
 Revisa si esta corriendo, y los logs que arroja.
 
