@@ -5,22 +5,17 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/hostname # OBLIGADO
-            operator: In
-            values:
-            - cluster-dia-6-m02 #ESTE
-            - cluster-dia-6-m03 #o ESTE valor
       preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
+      - weight: 1 #Preferible, pero no mandatorio
         preference:
           matchExpressions:
-          - key: app #Preferible esta key
+          - key: app
             operator: In
             values:
-            - frontend #Preferible esta label
+            - frontendzzzz
   containers:
-  - name: pod-con-node-affinity
-    image: busybox
+  - name: busybox-container
+    image: busybox:latest
+    command:
+    - sleep
+    - "3600"

@@ -6,6 +6,9 @@ En este dia, tenemos los siguientes ejercicios:
   - [1-node-labels](#1-node-labels)
   - [2-node-selector](#2-node-selector)
   - [3-pod-con-node-affinity](#3-pod-con-node-affinity)
+  - [4-antiaffinity](#4-antiaffinity)
+  - [5-pod-affinity](#5-pod-affinity)
+  - [6-node-name](#6-node-name)
 
 
 ## 1-node-labels
@@ -51,4 +54,22 @@ Ahora, edita el archivo `2.yaml`, para que se despliegue este otro pod en tu otr
 ## 3-pod-con-node-affinity
 
 Ahora vamos a desplegar un pod con node affinity.
+
+`kubectl apply -f pod-con-node-affinity.yaml`
+
+Y aqui vamos a ver que luego de crear la label: `app=frontend `en 1 nodo, el nodeAffinity, tratara de darle prioridad a ese nodo, pero sino, igual lo agenda.
+
+(Hagamos la prueba de poner una label que NO existe)
+
+## 4-antiaffinity
+
+Aqui vemos como usando los operadores NotIn, o DoesNotExist creamos una regla antiaffinity
+
+## 5-pod-affinity
+
+Aqui vemos como podemos para algo mas cutomizado, crear una regla de afinidad para un pod en específico, en vez de aplicarla a un nodo
+
+## 6-node-name
+
+Averigua el nombre de un nodo worker, ahora pon ese nombre en el archivo `node-name.yaml`, despliegalo y verifica que si este sirviendo.
 
