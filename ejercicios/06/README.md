@@ -46,13 +46,24 @@ Ahora revisemos que si quedó:
 
 Ahora, en la carpeta ahi un fichero, revisalo y despliegalo.
 
-`kubectl apply -f ejercicio2.yaml`
+`kubectl apply -f ejercicio1.yaml`
 
 Y revisa en que nodo fue ubicado ese pod:
 
 `kubectl get pods -o wide`
 
 Ahora, edita el archivo `2.yaml`, para que se despliegue este otro pod en tu otro nodo (cambia su **nodeName**)
+
+Revisa que si funciono.
+
+Si ya todo esta listo, ahora elimina el label que pusimos anteriormente:
+
+
+```
+kubectl label nodes NOMBRE disco-
+node/minikube-m02 unlabeled
+```
+> disco fue la label que pusimos antes, y el signo menos (-) la elimina.
 
 ## 3-pod-con-node-affinity
 
