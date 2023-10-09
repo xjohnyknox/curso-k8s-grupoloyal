@@ -9,6 +9,9 @@ En este dia, tenemos los siguientes ejercicios:
   - [4-antiaffinity](#4-antiaffinity)
   - [5-pod-affinity](#5-pod-affinity)
   - [6-node-name](#6-node-name)
+  - [7-taint-a-un-nodo](#7-taint-a-un-nodo)
+  - [8-toleration-pod-no-execute](#8-toleration-pod-no-execute)
+  - [9-resource-management](#9-resource-management)
 
 
 ## 1-node-labels
@@ -73,3 +76,50 @@ Aqui vemos como podemos para algo mas cutomizado, crear una regla de afinidad pa
 
 Averigua el nombre de un nodo worker, ahora pon ese nombre en el archivo `node-name.yaml`, despliegalo y verifica que si este sirviendo.
 
+## 7-taint-a-un-nodo
+
+Vamos a hacer un taint a un nodo:
+`kubectl taint nodes NODO key=value:NoSchedule`
+
+`kubectl describe node NODO | grep Taint`
+
+Ahora revisemos si lo agendo en el nodo que lo tolera:
+
+`kubectl get pods -o wide`
+
+## 8-toleration-pod-no-execute
+
+Ahora vamos a ver como es asignar un pod a un nodo en modo: **No-Execute**
+
+`kubectl taint nodes NODO key=value:NoExecute`
+
+Y apliquemos el manifiesto del `2-toleration-pod-no-execute.yaml`.
+
+Y revisa que el pod no esta corriendo.
+
+Ahora quita ese `Taint`, del nodo y vuelve a correr el pod.
+
+`kubectl taint nodes NODO key=value:NoExecute-`
+
+Ahora si corre, porque no hay mas Taints sobre ese efecto: `NoExecute`.
+
+## 9-resource-management
+
+Vamos a poner límites a memoria y CPU de un pod.
+
+`1-poniendo-limites.yaml`
+
+Revisa que si esté con los limites seteados en el pod.
+
+
+Ahora vamos a usar el comando de stress para bombardear el pod con mas del CPU que tenemos seteado:
+
+`kubectl exec -it 1-poniendo-limites -- bash`
+
+`stress --cpu 900m`
+
+Y revisemos si salió el error de `OOMKilled`
+
+Ahora probemos la memoria
+
+`stress --vm 100 --vm-bytes 256M`
