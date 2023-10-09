@@ -19,7 +19,7 @@ En este dia, tenemos los siguientes ejercicios:
 Vamos a ver qué labels ya tienen nuestros nodos:
 
 Ejecutamos minikube con 2 nodos:
-`minikube start --nodes 2 -p 2-nodos`
+`minikube start --nodes 2`
 
 Luego revisamos con:
 
