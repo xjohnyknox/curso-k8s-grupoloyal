@@ -12,7 +12,7 @@ spec:
           - key: app
             operator: In
             values:
-            - frontendzzzz
+            - frontend
   containers:
   - name: busybox-container
     image: busybox:latest
