@@ -9,8 +9,8 @@ En este dia, tenemos los siguientes ejercicios:
   - [4-antiaffinity](#4-antiaffinity)
   - [5-pod-affinity](#5-pod-affinity)
   - [6-node-name](#6-node-name)
-  - [7-taint-a-un-nodo](#7-taint-a-un-nodo)
-  - [8-toleration-pod-no-execute](#8-toleration-pod-no-execute)
+  - [7-pod-con-topology-spread](#7-pod-con-topology-spread)
+  - [8-taint-a-un-nodo](#8-taint-a-un-nodo)
   - [9-resource-management](#9-resource-management)
 
 
@@ -87,18 +87,28 @@ Aqui vemos como podemos para algo mas cutomizado, crear una regla de afinidad pa
 
 Averigua el nombre de un nodo worker, ahora pon ese nombre en el archivo `node-name.yaml`, despliegalo y verifica que si este sirviendo.
 
-## 7-taint-a-un-nodo
+## 7-pod-con-topology-spread
+
+Para que funcione, vamos a crear un pod con las etiquetas que el manifiesto va a evadir:
+
+`kubectl run prueba-7 --image httpd -l app=mi-app`
+
+Y ahora si, aplico el manifiesto, y veo que en el nodo donde se asigno el pod prueba-7, no hay un pod llamado `pod-con-topology-spread`
+
+## 8-taint-a-un-nodo
 
 Vamos a hacer un taint a un nodo:
 `kubectl taint nodes NODO key=value:NoSchedule`
 
 `kubectl describe node NODO | grep Taint`
 
-Ahora revisemos si lo agendo en el nodo que lo tolera:
+Aplicamos el manifiesto `1-toleration-pod.yaml`.
+
+Y revisemos si lo agendo en el nodo que lo tolera:
 
 `kubectl get pods -o wide`
 
-## 8-toleration-pod-no-execute
+**toleration-pod-no-execute**
 
 Ahora vamos a ver como es asignar un pod a un nodo en modo: **No-Execute**
 
