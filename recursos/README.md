@@ -20,6 +20,8 @@
 - [Documentación oficial en kubernetes](https://kubernetes.io/es/docs/home/).
 - [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [Versiones de Kubernetes](https://kubernetes.io/releases/)
+- [kubecolor](https://github.com/kubecolor/kubecolor/releases/tag/v0.0.21)
+  > Luego, creo un alias para usar kubectl=kubecolor
 
 ## IDEs-para-kubernetes:
 - [Lens](https://k8slens.dev/)
