@@ -29,4 +29,7 @@ spec:
             - key-2
   containers:
   - name: pod-con-affinity-anti-affinity
-    image: registry.k8s.io/pause:2.0
+    image: busybox:latest
+    command:
+    - sleep
+    - "3600"
