@@ -6,7 +6,7 @@ spec:
   containers:
     - name: juego-configmaps
       image: busybox:latest
-      command: [ "/bin/sh", "-c", "env" ]
+      command: [ "/bin/sh", "-c", "sleep 500000" ]
       env:
         - name: NOMBRE
           valueFrom:

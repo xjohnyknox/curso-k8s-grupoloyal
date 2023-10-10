@@ -4,6 +4,7 @@ En este dia, tenemos los siguientes ejercicios:
 
 - [Ejercicios Dia 05.](#ejercicios-dia-05)
   - [1-comandos](#1-comandos)
+    - [4.yaml](#4yaml)
   - [2-configmaps](#2-configmaps)
   - [3-redis](#3-redis)
   - [4-secrets](#4-secrets)
@@ -11,6 +12,7 @@ En este dia, tenemos los siguientes ejercicios:
     - [2](#2)
     - [3](#3)
   - [4](#4)
+  - [5](#5)
 
 
 ## 1-comandos
@@ -18,6 +20,15 @@ En este dia, tenemos los siguientes ejercicios:
 Vamos a ver como funciona ejecutar comandos dentro de un pod, de diferentes maneras.
 
 Revisa y aplica cada manifiesto.
+
+### 4.yaml
+
+Crear manifiesto que corra un Pod, llamado ejercicio4
+En ese pod, tener 3 contenedores asi:
+ 1. ubuntu, con la imagen ubuntu:latest
+ 2. debian, con la imagen debian:latest
+ 3. oraclelinux, con la imagen oraclelinux:8
+ Y que en cada uno muestre su version del sistema
 
 ## 2-configmaps
 
@@ -184,3 +195,20 @@ Ahora, muestra los logs del container `dotfile-test-container` y luego del `show
 
 Que notaste?
 
+## 5
+Aplica el manifiesto `4.yaml` y revisa que le falta.
+
+Ahora crea un secreto con estos valores:
+
+```
+nombre: db-secret
+DB_Host=mibasededatos
+DB_User=root
+DB_Password=password123
+```
+
+> `kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal DB_User=root --from-literal DB_Password=password123`
+
+Borra el pod y vuelvelo a crear.
+
+Expone el puerto 8080 para mirar si la aplicación esta corriendo bien.
