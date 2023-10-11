@@ -1,0 +1,73 @@
+name: Check - Ejercicio Final
+
+on:
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  deploy_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Minikube
+        run: |
+          # Install Minikube and Kubectl
+          curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+          chmod +x minikube
+          sudo mv minikube /usr/local/bin/
+          curl -Lo kubectl https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
+          echo "Instalando minikube con 2 nodos"
+          # Start Minikube with two nodes (you can adjust the configuration)
+          minikube start --nodes 2
+          echo "Minikube instalado correctamente"          
+
+      - name: Apply Kubernetes Manifests
+        run: |
+          kubectl apply -f ./ejercicios/FINAL
+          echo "Aplicando todos los manifiestos de la carpeta."
+        working-directory: ${{ github.workspace }}
+
+      - name: Wait 5 Mins
+        run: |
+          sleep 300
+          echo "Esperando 5 minutos a que todos los manifiestos sean desplegados."
+        working-directory: ${{ github.workspace }}
+
+      - name: Revisando Namespace ejercicio-final
+        run: |
+          # Revisando si el NS "ejercicio-final" existe
+          namespace_output=$(kubectl get namespaces -o custom-columns=NAME:.metadata.name --no-headers)
+          if [[ $namespace_output != *"ejercicio-final"* ]]; then
+            echo "Error: El namespace 'ejercicio-final' no existe."
+            exit 1
+          fi
+        continue-on-error: true
+        working-directory: ${{ github.workspace }}
+
+      - name: Revisando ReplicaSets
+        run: |
+          # Revisando si el NS "replica-gb" tiene 3 replicas
+          rs_output=$(kubectl get replicaset gb-front-end -o custom-columns=REPLICAS:.status.replicas --no-headers)
+          if [[ $rs_output != *"3"* ]]; then
+            echo "Error: El replicaset 'replica-gb' no tiene 3 replicas."
+            exit 1
+          fi
+        continue-on-error: true
+        working-directory: ${{ github.workspace }}
+
+      - name: Revisando Deployment
+        run: |
+          # Revisando si el deployment "mi-deployment" tiene 3 replicas
+          deployment_output=$(kubectl get deployment mi-deployment -o custom-columns=REPLICAS:.status.replicas --no-headers)
+          if [[ $deployment_output != *"3"* ]]; then
+            echo "Error: El deployment 'mi-deployment' no tiene 3 replicas."
+            exit 1
+          fi
+        continue-on-error: true
+        working-directory: ${{ github.workspace }}        

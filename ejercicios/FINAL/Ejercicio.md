@@ -26,9 +26,10 @@ Crea un pod que use labels:
 
 ## Creando un replicaset:
 
-Crea un manifiesto para tener un RS, que use esta imagen: `gcr.io/google_samples/gb-frontend:v3`
+Crea un manifiesto para tener un RS, que se llame `gb-front-end`
+Y que use esta imagen: `gcr.io/google_samples/gb-frontend:v3`
 Y que tenga `3 replicas`.
-Crealo en su propio namespace: `replica-gb`
+
 
 ## Creando un deployment:
 
@@ -37,6 +38,8 @@ Crea un deployment con 3 replicas, de la imagen nginx, con el comando sleep 3600
 Que incluya el label: 
 
 `tipo: deployment`
+
+Y que se llame: `mi-deployment`
 
 
 
