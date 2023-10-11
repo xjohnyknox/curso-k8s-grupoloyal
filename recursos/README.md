@@ -2,15 +2,24 @@
 
 
 - [Recursos.](#recursos)
+  - [Material-del-curso:](#material-del-curso)
   - [Información-sobre-DevOps:](#información-sobre-devops)
   - [Lista-de-recursos-sobre-kubernetes:](#lista-de-recursos-sobre-kubernetes)
   - [IDEs-para-kubernetes:](#ides-para-kubernetes)
   - [Como-crear-tu-propio-cluster:](#como-crear-tu-propio-cluster)
   - [Como-tunear-tu-VSCode](#como-tunear-tu-vscode)
   - [Herramientas-de-YAML](#herramientas-de-yaml)
-  - [Material-del-curso:](#material-del-curso)
   - [Canales-Youtube](#canales-youtube)
   - [Seguridad-en-Kubernetes](#seguridad-en-kubernetes)
+
+## Material-del-curso:
+- [Enlace con videos del OneDrive](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EonRfkWKT_xKhiygEYVYo34BIGd0HqTg-whtkaNIJ6cZbw?e=ZeDPnX)
+
+> Videos de sólo consulta, no deja descargar.
+
+- [Enlace con Documentación](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EmEnz-hMTf9GhjasshSe8ZEB9Aj0qPdN2WvcYGOSxHH8OA?e=J3lj4c)
+- [Enlace con formulario final de retroalimentación](https://forms.office.com/Pages/ResponsePage.aspx?id=2sqCWS7YOU-qghbzEefnlnBB0KLoFw9AoxW615hjNXVUOVJVU0VJUk1QSVIzU0ZRWjM5RkdKVktJMS4u).
+
 
 ## Información-sobre-DevOps:
 - [Tabla periódica de los elementos DevOps](https://digital.ai/learn/devsecops-periodic-table/)
@@ -40,13 +49,6 @@
 ## Herramientas-de-YAML
 - [yamlfmt](https://github.com/google/yamlfmt): Herramienta para dar formato a un fichero YAML desde la terminal.
 
-## Material-del-curso:
-- [Enlace con videos del OneDrive](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EonRfkWKT_xKhiygEYVYo34BIGd0HqTg-whtkaNIJ6cZbw?e=ZeDPnX)
-
-> Videos de sólo consulta, no deja descargar.
-
-- [Enlace con Documentación](https://loyalinfinitybarcelona-my.sharepoint.com/:f:/g/personal/formadortres_grupoloyal_es/EmEnz-hMTf9GhjasshSe8ZEB9Aj0qPdN2WvcYGOSxHH8OA?e=J3lj4c)
-- [Enlace con formulario final de retroalimentación](https://forms.office.com/Pages/ResponsePage.aspx?id=2sqCWS7YOU-qghbzEefnlnBB0KLoFw9AoxW615hjNXVUOVJVU0VJUk1QSVIzU0ZRWjM5RkdKVktJMS4u).
 
 
 ## Canales-Youtube

@@ -8,54 +8,63 @@ En este dia, tenemos los siguientes ejercicios:
   - [Creando un replicaset:](#creando-un-replicaset)
   - [Creando un deployment:](#creando-un-deployment)
   - [Crea un ServiceAccount:](#crea-un-serviceaccount)
+  - [Crea un ClusterRole](#crea-un-clusterrole)
+  - [Affinity Rules:](#affinity-rules)
+  - [Documentación:](#documentación)
 
 
 
 
 ## Creando un Namespace:
 
-Crea un Namespace llamado "ejercicio-final"
+Crea un Namespace llamado `ejercicio-final`
 
 ## Creando un pod:
 
+Crea un pod que use labels: 
+`ejercicio:final`
+
 ## Creando un replicaset:
 
-Crea un manifiesto para tener un RS, que use esta imagen: gcr.io/google_samples/gb-frontend:v3
-Y que tenga 3 replicas.
-Crealo en su propio namespace: replica-gb
+Crea un manifiesto para tener un RS, que use esta imagen: `gcr.io/google_samples/gb-frontend:v3`
+Y que tenga `3 replicas`.
+Crealo en su propio namespace: `replica-gb`
 
 ## Creando un deployment:
 
-Crea un 
+Crea un deployment con 3 replicas, de la imagen nginx, con el comando sleep 3600.
+
+Que incluya el label: 
+
+`tipo: deployment`
+
+
 
 ## Crea un ServiceAccount:
 
-Create a ServiceAccount named "exercise-serviceaccount" within the "exercise-namespace."
-Create a ClusterRole:
+Crea un **ServiceAccount** llamado "ejercicio-SA" dentro del namespace: `ejercicio-final`
 
-Create a ClusterRole named "exercise-clusterrole" that has permissions to list Pods and Services across all namespaces.
-Bind the ServiceAccount and ClusterRole:
+## Crea un ClusterRole
 
-Create a ClusterRoleBinding to bind the "exercise-serviceaccount" to the "exercise-clusterrole."
-Create Deployments:
+Crea un **ClusterRole** llamado "ejercicio-clusterrole" que tenga permisos para listar, crear y borrar pods y servicios en **todos los namespaces**
 
-Create two Deployments within the "exercise-namespace."
-Deployment 1: Name it "app-deployment-1."
-Deployment 2: Name it "app-deployment-2."
-Each Deployment should have a label indicating its purpose (e.g., "app=exercise-app-1" for Deployment 1, and "app=exercise-app-2" for Deployment 2).
-Affinity Rules:
+Aplica el Binding apropiado a ese ClusterRole para el ejercicio-SA y ejercicio-clusterrole
 
-Define affinity rules for both Deployments:
-Deployment 1 should have an anti-affinity rule to ensure it does not run on the same node as Deployment 2.
-Deployment 2 should have an affinity rule to ensure it runs on the same node as Deployment 1.
-Labels:
 
-Apply labels to Pods in each Deployment:
-Pods in "app-deployment-1" should have a label "tier=frontend."
-Pods in "app-deployment-2" should have a label "tier=backend."
-Validation:
+## Affinity Rules:
 
-Deploy the resources and verify that the Deployments run in separate nodes due to the anti-affinity rule and that the labels are correctly applied to the Pods.
-Documentation:
+Crea 2 deployments asi:
 
-Provide a README or documentation file explaining the purpose of each resource, how they are connected, and how the affinity and anti-affinity rules work in this context.
+app-deployment-1 con 1 replica de la imagen nginx, label: app = deployment1, tier=frontend
+app-deployment-2 con 1 replica de la imagen nginx, label: app = deployment2, tier=backend
+
+
+
+Deployment 1 debe tener una regla anti-affinity para asegurarse que no corra en el nodo donde corra el Deployment 2.
+Deployment 2 debe tener una regla de afinidad, para asegurarse que corra en el mismo nodo donde corra el Deployment 1.
+
+## Documentación:
+
+Proporcionar un archivo `PASOS.md` que explique lo que hiciste para lograr cada punto.
+
+> NOTA: Todo debe estar en la carpeta FINAL
