@@ -5,8 +5,13 @@
 
 ## Preparación del Entorno:
 
-Cada estudiante deberá tener Minikube instalado en su máquina.
-Clonar el repositorio usando Git.
+Cada estudiante deberá tener Minikube instalado en su máquina con 2 nodos (minikube start --nodes 2)
+Hacer fork al repo.
+Luego del fork si puedes clonar tu nuevo repositorio
+Y sobre tu repo, guardar cambios y respuestas en:
+`./ejercicios/FINAL/`
+Una vez tengas todos los manifiestos, vas a crear un PR sobre el repo original mio.
+
 
 ## Desarrollo de la Aplicación:
 

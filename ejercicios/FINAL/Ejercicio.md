@@ -55,13 +55,14 @@ Aplica el Binding apropiado a ese ClusterRole para el ejercicio-SA y ejercicio-c
 
 Crea 2 deployments asi:
 
-app-deployment-1 con 1 replica de la imagen nginx, label: app = deployment1, tier=frontend
-app-deployment-2 con 1 replica de la imagen nginx, label: app = deployment2, tier=backend
+`app-deployment-1 con 1 replica de la imagen nginx, label: app = deployment1, tier=frontend`
+.
+`app-deployment-2 con 1 replica de la imagen nginx, label: app = deployment2, tier=backend`
 
 
 
-Deployment 1 debe tener una regla anti-affinity para asegurarse que no corra en el nodo donde corra el Deployment 2.
-Deployment 2 debe tener una regla de afinidad, para asegurarse que corra en el mismo nodo donde corra el Deployment 1.
+`Deployment 1` debe tener una regla anti-affinity para asegurarse que no corra en el nodo donde corra el `Deployment 2`.
+`Deployment 2` debe tener una regla de afinidad, para asegurarse que corra en el mismo nodo donde corra el `Deployment 1`.
 
 ## Documentación:
 
