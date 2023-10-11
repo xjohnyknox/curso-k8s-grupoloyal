@@ -41,6 +41,9 @@ Y revisemos que si salga en:
 Usemos ese nuevo contexto:
 
 `kubectl config use-context goku-context`
+
+Y verificamos que estemos en el:
+
 `kubectl config current-context`
 
 E intentemos crear un namespace.
