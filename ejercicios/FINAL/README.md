@@ -5,12 +5,26 @@
 
 ## Preparación del Entorno:
 
-Cada estudiante deberá tener Minikube instalado en su máquina con 2 nodos (minikube start --nodes 2)
+Cada estudiante deberá tener Minikube instalado en su máquina con 2 nodos (minikube start --nodes 2).
+
 Hacer fork al repo.
-Luego del fork si puedes clonar tu nuevo repositorio
+
+Luego del fork si puedes clonar tu nuevo repositorio.
+
 Y sobre tu repo, guardar cambios y respuestas en:
 `./ejercicios/FINAL/`
-Una vez tengas todos los manifiestos, vas a crear un PR sobre el repo original mio.
+
+Una vez tengas todos los manifiestos, vas a crear un PR sobre el repo original mio asi:
+
+![Alt text](image.png)
+
+Dar click en contribuir, y les abrira una ventana similar:
+
+![Alt text](image-1.png)
+
+Le dan a **open pull request**, y en el título ponen su nombre y le dan a abrir pull request:
+
+![Alt text](image-2.png)
 
 
 ## Desarrollo de la Aplicación:
