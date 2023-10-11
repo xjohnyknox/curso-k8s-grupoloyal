@@ -51,6 +51,9 @@ E intentemos crear un namespace.
 
 Vamos a desplegar el archivo `1.yaml` PERO usando el contexto de minikube que si tiene permisos.
 
+Y ahora vamos a aplicar el manifiesto 2.yaml, para dar rol de crear y borrar pods en ese namespace.
+
+`kubectl apply -f 2.yaml`
 
 ## 2-serviceaccount
 
