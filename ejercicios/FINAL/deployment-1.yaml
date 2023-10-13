@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment-1
+  labels:
+    tipo: deployment
+    app: deployment1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment1
+      tier: frontend
+       
+  template:
+    metadata:
+      labels:
+        app: deployment1
+        tier: frontend
+     
+    spec:
+     affinity:
+         podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - deployment2
+            topologyKey: kubernetes.io/hostname   
+     containers:
+      - name: deployment1
+        image: nginx:latest
+        
